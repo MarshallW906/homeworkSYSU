@@ -1,0 +1,19 @@
+#orderBar {
+    position: absolute;
+    width: 450px;
+    height: 200px;
+    left: 50%;
+    bottom: 400px;
+    transform: translateX(-50%);
+    background-color: lightblue;
+    padding: 0;
+}
+#order, #tucao {
+    font-size: 26pt;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: text-bottom;
+    height: 80px;
+    margin: auto;
+    padding: 0;
+}

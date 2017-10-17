@@ -1,0 +1,256 @@
+/*
+ * 15331302 Marshall 'Xiangyu' Wang
+ * 2016.09.26
+ */
+ul, li{
+    list-style-type: none;
+    margin: 0;
+}
+#at-plus-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#bottom-positioner, #button {
+    position: relative;
+}
+#bottom-positioner {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+} /* center */
+
+/* -------------------------------------------------------------------------- */
+/* styles WITHOUT HOVER */
+#bottom-positioner {
+    width: 80px;
+    height: 80px;
+}
+#button {
+    border-radius: 50%;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    /* make it center by CSS3's features */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.apb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: relative;
+    top: -20%;
+    margin: 0;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.icon {
+    pointer-events: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* make it center */
+    -webkit-transition: all .4s ease-out .7s;
+    -moz-transition: all .4s ease-out .7s;
+    -o-transition: all .4s ease-out .7s;
+    transition: all .4s ease-out .7s;
+    background: rgb(151, 157, 221) url('./assets/images/atplus_white.png') no-repeat center;
+}
+
+
+#info-bar, .info, .info ul{
+    background-color: #7e7e7e;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+#info-bar {
+    float: left;
+    position: relative;
+    left: -45px;
+    opacity: 0;
+    -webkit-transform: scale(0.1) translateY(-40%);
+    -moz-transform: scale(0.1) translateY(-40%);
+    -ms-transform: scale(0.1) translateY(-40%);
+    -o-transform: scale(0.1) translateY(-40%);
+    transform: scale(0.1) translateY(-40%);
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.info {
+    position: relative;
+    overflow: auto;
+    text-align: center;
+}
+.info ul {
+    overflow: hidden;
+}
+.info li {
+    margin: 10px auto;
+}
+.info .page {
+    position: relative;
+}
+.page span {
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+.info .user {
+    width: 40%;
+}
+.user span {
+    margin: auto 15px;
+    font-size: 15pt;
+}
+.info .comment {
+    width: 60%;
+}
+.comment span {
+    font-size: 24pt;
+    margin: auto 20px;
+}
+.info .mine {
+    display: inline-block;
+    color: #079E6E;
+    width: 40%;
+    position: relative;
+    left: 10px;
+}
+.mine img {
+    vertical-align: bottom;
+}
+.mine span {
+    vertical-align: top;
+    margin: auto 15px;
+}
+
+
+#control-ring-container {
+    position: relative;
+    top: 165px;
+}
+#control-ring {
+    position: absolute;
+    left: -45px;
+    top: -170px;
+}
+#control-ring li {
+    float: left;
+    background-color: #666666;
+}
+.button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: gray no-repeat center;
+    background-size: 50%;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    opacity: 0;
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.mask {
+    background-image: url("./assets/images/mask.png");
+}
+.history {
+    background-image: url("./assets/images/history.png");
+}
+.message {
+    background-image: url("./assets/images/message.png");
+}
+.setting {
+    background-image: url("./assets/images/setting.png");
+}
+.sign {
+    background-image: url("./assets/images/signout.png");
+}
+.unread {
+    width: 1.5em;
+    height: 1.5em;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 5pt;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.7em;
+    position: relative;
+    left: 25px;
+}
+/* part without hover end */
+
+/* ================================================================================ */
+
+/* part with hover */
+#button:hover #info-bar {
+    opacity: 1;
+    transform: translate(0px, -105%);
+}
+#button:hover .icon {
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -ms-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    background: rgba(48, 63, 159, 1) url('./assets/images/atplus_green.png') no-repeat center;;
+}
+#button:hover .button {
+    opacity: 1;
+}
+#button:hover .button:hover {
+    background-color: #1c1f26;
+}
+#button:hover .mask {
+    transform: translate(-65px, -20px);
+}
+#button:hover .history {
+    transform: translate(-80px, 15px);
+}
+#button:hover .message {
+    transform: translate(-67px, 52px);
+}
+#button:hover .setting {
+    transform: translate(-37px, 75px);
+}
+#button:hover .sign {
+    transform: translate(0px, 80px);
+}
+#button:hover #info-bar, #button:hover #control-ring-container {
+    pointer-events: auto;
+}

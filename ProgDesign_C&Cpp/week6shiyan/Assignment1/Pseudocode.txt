@@ -1,0 +1,61 @@
+Begin
+
+typedef struct {
+	String t_id
+	String t_salary
+	String t_height
+} Employee;
+
+void exch(Employee[] ems, int i, int j);
+void Emsort(Employee[] ems, int length);
+
+main {
+	Dim total_test, e_num, current_deal, current_e as Integer
+	Initialize current_test := 1
+	String idforsrch
+	Input "%d">>total_test
+	do {
+		Input "%d">>e_num
+		Employee ems[e_num]
+		loop current_e := 0 to (e_num - 1) Step 1 {
+			Input ems[current_e].t_id, ems[current_e].t_salary, ems[current_e].t_height;
+		}
+		Emsort(ems, e_num);
+
+		Input "%s">>idforsrch
+		loop current_deal := 0 to (e_num - 1) Step 1 {
+			if (idforsrch == ems[current_deal].t_id) {
+				Initialize potential_boss = current_deal + 1, current_subordinates = 0;
+				while (ems[current_deal].t_height > ems[potential_boss].t_height)
+					potential_boss++;
+				loop j := 0 to (current_deal - 1) Step 1 {
+					if (ems[current_deal].t_height >= ems[j].t_height)
+							current_subordinates++;
+				}
+				if (current_deal == e_num - 1) boss = 0;
+					else boss = ems[potential_boss].t_id;
+				print "(%s,%d)"<<boss<<current_subordinates;
+				break;
+			}
+		}
+		current_test++;
+	} while (current_test <= total_test);
+	return 0;
+}
+
+void Emsort(Employee[] ems, int num) {
+    Dim i, j as Integer
+    loop i := 0 to (num - 1) Step 1
+        loop j := 0 to (num - i - 1) Step 1
+            if (ems[j].t_salary > ems[j + 1].t_salary)
+                exch(ems, j, j + 1);
+}
+
+void exch(Employee ems[], int i, int j) {
+    Employee t;
+    t := ems[i];
+    ems[i] := ems[j];
+    ems[j] := t;
+}
+
+End

@@ -1,0 +1,29 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        title Sign In
+        link(rel='stylesheet', href='./css_js/index.css')
+        script(type='text/javascript', src='../css_js/jquery.2.1.0.js')
+        script(type='text/javascript', src='../css_js/lodash.3.10.1.js')
+        script(type='text/javascript', src='../css_js/index.js')
+body
+    #form-container
+        form(action='/', method='POST')
+            h2 User Register
+            .info-row
+                label(for='username') UserName :
+                input#username(type='text', name='username', placeholder='username')
+            .info-row
+                label(for='number') StudentNo. :
+                input#number(type='text', name='number', placeholder='student No.')
+            .info-row
+                label(for='tel') Tel :
+                input#tel(type='text', name='tel', placeholder='tel number')
+            .info-row
+                label(for='email') Email :
+                input#email(type='text', name='email', placeholder='Email')
+            input.btn(type='reset', value='Reset')
+            input.btn(type='submit', value='Submit')
+        #warnings
+            p #{warningMsg}

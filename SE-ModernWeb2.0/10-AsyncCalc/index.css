@@ -1,0 +1,222 @@
+/*
+ * 15331302 Marshall 'Xiangyu' Wang
+ * 2016.11.22
+ */
+* {
+    font-family: "Comic Sans MS", sans-serif;
+}
+ul, li{
+    list-style-type: none;
+    margin: 0;
+}
+#at-plus-container {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+#bottom-positioner, #button {
+    position: relative;
+}
+#bottom-positioner {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+} /* center */
+
+/* -------------------------------------------------------------------------- */
+/* styles WITHOUT HOVER */
+#bottom-positioner {
+    width: 80px;
+    height: 80px;
+}
+#button {
+    border-radius: 50%;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+    /* make it center by CSS3's features */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 100px;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.apb {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    position: relative;
+    top: -20%;
+    margin: 0;
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.icon {
+    pointer-events: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* make it center */
+    -webkit-transition: all .4s ease-out .7s;
+    -moz-transition: all .4s ease-out .7s;
+    -o-transition: all .4s ease-out .7s;
+    transition: all .4s ease-out .7s;
+    background: rgb(151, 157, 221) url('assets/images/atplus_white.png') no-repeat center;
+}
+
+
+#info-bar, .info, .info ul{
+    background-color: #7e7e7e;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+}
+#info-bar {
+    float: left;
+    position: relative;
+    left: -45px;
+    opacity: 0;
+    -webkit-transform: scale(0.1) translateY(-40%);
+    -moz-transform: scale(0.1) translateY(-40%);
+    -ms-transform: scale(0.1) translateY(-40%);
+    -o-transform: scale(0.1) translateY(-40%);
+    transform: scale(0.1) translateY(-40%);
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.info {
+    position: relative;
+    overflow: auto;
+    text-align: center;
+}
+.info ul {
+    overflow: hidden;
+}
+.info li {
+    margin: auto;
+    line-height: 3em;
+    font-size: 40pt;
+}
+
+#control-ring-container {
+    position: relative;
+    top: 165px;
+}
+#control-ring {
+    position: absolute;
+    left: -45px;
+    top: -170px;
+}
+#control-ring li {
+    float: left;
+}
+.button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-size: 100%;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    opacity: 0;
+    color: #2eda55;
+    text-align: center;
+    line-height: 2.3em;
+    font-weight: bolder;
+    vertical-align: text-bottom;
+    -webkit-transform: scale(0.1);
+    -moz-transform: scale(0.1);
+    -ms-transform: scale(0.1);
+    -o-transform: scale(0.1);
+    transform: scale(0.1);
+    -webkit-transition: all .4s ease-out;
+    -moz-transition: all .4s ease-out;
+    -o-transition: all .4s ease-out;
+    transition: all .4s ease-out;
+}
+.button-unclicked {
+    background-color: #3d6bff;
+}
+.button-clicked {
+    background-color: #666;
+}
+.unread {
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    border-radius: 50%;
+    background-color: red;
+    font-size: 5pt;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.7em;
+    position: absolute;
+    font-weight: bolder;
+    left: 25px;
+    top: 0;
+}
+/* part without hover end */
+
+/* ================================================================================ */
+
+/* part with hover */
+#button:hover {
+    /*width: 150px;*/
+    /*height: 300px;*/
+}
+#button:hover #info-bar {
+    opacity: 1;
+    transform: translate(0px, -110%);
+}
+#button:hover .icon {
+    padding: 0;
+    width: 80px;
+    height: 80px;
+    transition: all .4s ease-out;
+    background: rgba(48, 63, 159, 1) url('assets/images/atplus_green.png') no-repeat center;
+}
+#button:hover .button {
+    opacity: 1;
+}
+#button:hover .button:hover {
+    background-color: #7975ff;
+}
+#button:hover #A-button {
+    transform: translate(-40px, -25px);
+}
+#button:hover #B-button {
+    transform: translate(-55px, 12px);
+}
+#button:hover #C-button {
+    transform: translate(-40px, 48px);
+}
+#button:hover #D-button {
+    transform: translate(-5px, 70px);
+}
+#button:hover #E-button {
+    transform: translate(35px, 70px);
+}
+#button:hover #info-bar, #button:hover #control-ring-container {
+    pointer-events: auto;
+}

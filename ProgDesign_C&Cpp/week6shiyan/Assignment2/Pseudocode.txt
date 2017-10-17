@@ -1,0 +1,56 @@
+initialize SENSOR_DISTANCE = 40 as const Integer
+
+main {
+	Dim wall as Integer
+	lookLeft;
+	if (getDistance() < SENSOR_DISTANCE) {
+		initialize wall = 0
+	}
+	else {
+		lookRight;
+		initialize wall = 1
+	}
+
+	if (wall == 0) {
+		while (shutDown != 1) {
+			moveStraight;
+			loop {
+				lookLeft;
+				if (getDistance() < SENSOR_DISTANCE) {
+					lookForward;
+					if (getDistance() < SENSOR_DISTANCE) {
+						turnRight;
+					}
+					else {
+						break;
+					}
+				else {
+					turnLeft;
+				}
+				}
+			} until the "break;" inside be run
+		}
+	}
+	else {
+		do {
+			moveStraight;
+			loop {
+				lookRight;
+				if (getDistance() < SENSOR_DISTANCE) {
+					lookForward;
+					if (getDistance() < SENSOR_DISTANCE) {
+						turnLeft;
+					}
+					else {
+						break;
+					}
+				else {
+					turnRight;
+				}
+				}
+			} until the "break;" inside be run
+		} while (shutDown() != 1);
+	}
+
+	(end)
+}

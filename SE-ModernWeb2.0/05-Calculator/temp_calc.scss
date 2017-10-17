@@ -1,0 +1,80 @@
+/*!
+ * Created by Marshall Wang
+ * use sass to create css file (source: temp_calc.scss)
+ * 2016.10.04
+ */
+
+// some value & macro
+$full_percent: 100%;
+$half_percent: 50%;
+$rel: relative;
+@mixin margin_padding_4sides($m : 0, $p : 0) {
+  margin: $m;
+  padding: $p;
+}
+@mixin center-x {
+  position: $rel;
+  left: $half_percent;
+  transform: translateX(-50%);
+}
+
+body {
+  width: $full_percent;
+  font-family: sans-serif;
+}
+
+#msh-calculator {
+  width: 300px;
+  @include center-x;
+  border: 2px solid #526196;
+  box-sizing:border-box;
+  background-color: #34495e;
+  h1 {
+    color: #00AE68;
+    text-align: center;
+    width: 80%;
+    @include center-x;
+  }
+}
+
+.screen {
+  @include margin_padding_4sides;
+  .text-cont {
+    font-size: 20px;
+    text-align: right;
+    display: block;
+    margin: 12px auto;
+    padding: 0;
+    width: 90%;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+*:focus{outline:none;}
+
+#button-field {
+  width: 270px;
+  text-align: center;
+  @include center-x;
+}
+.buttons {
+  /*! make every 4 buttons placed in one line */
+  font-size: 20px;
+  display: inline-block;
+  margin: 5px 3px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border: 1px solid #808080;
+  background-color: #3498db;
+  box-shadow: 3px 3px 5px #888888;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #75ee3b;
+  }
+  &:active {
+    background: #2f8f00;
+  }
+}

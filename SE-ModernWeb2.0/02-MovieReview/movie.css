@@ -1,0 +1,124 @@
+body {
+    background: url("http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/background.png?version=1&modificationDate=1268896312000");
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#banner {
+    height: 50px;
+    background: url("http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/bannerbackground.png?version=1&modificationDate=1268896312000");
+}
+#banner img {
+    display: block;
+    clear: both;
+    margin: auto;
+}
+
+h1 {
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma, Verdana, sans-serif;
+    text-align: center;
+}
+
+#content {
+    margin: 0 auto;
+    width: 800px;
+    border: 4px grey solid;
+    height: auto;
+    overflow: hidden;
+}
+#content > p {
+    float: left;
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+    background-color: #A2B964;
+    display: block;
+    text-align: center;
+}
+
+#rightBar {
+    float: right;
+    background-color: #A2B964;
+    width: 250px;
+    height: 100%;
+    overflow: auto;
+}
+
+#leftBar {
+    float: left;
+    width: 550px;
+    overflow: auto;
+    height: 100%;
+}
+
+#rottenbigImg {
+    width: 550px;
+    height: 83px;
+    background: url("http://my.ss.sysu.edu.cn/wiki/download/attachments/7045968/rottenbackground.png?version=1&modificationDate=1268896385000") repeat-x;
+}
+#rottenbigImg img {
+    vertical-align: bottom;
+}
+#rottenbigImg > span {
+    color: red;
+    font-size: 48pt;
+    font-weight: bold;
+}
+#rottenbigImg > span > span{
+    font-size: 8pt;
+    color: white;
+    font-weight: normal;
+}
+
+dl {
+    padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+}
+dt {
+    font-weight: bold;
+}
+dd {
+    margin-bottom: 1em;
+}
+
+
+.quotes {
+    float: left;
+    width: 47%;
+    margin-left: 2%;
+}
+.quotes .quotesContentBlocks {
+    margin-bottom: 3em;
+}
+.quotes .quotesContentBlocks .comments p {
+    overflow: auto;
+    border: 2px gray solid;
+    background-color: #E1D697;
+    font-weight: bold;
+    padding: 8px;
+}
+.quotes .quotesContentBlocks .comments p img {
+    float: left;
+    margin-right: 5px;
+}
+.quotes .quotesContentBlocks .users p {
+    overflow: auto;
+}
+.quotes .quotesContentBlocks .users p img {
+    float: left;
+    margin-right: 5px;
+}
+.quotes .quotesContentBlocks .users p span {
+    font-style: italic;
+}
+
+#w3cCheck {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}

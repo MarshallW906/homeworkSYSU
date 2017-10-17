@@ -1,0 +1,27 @@
+* {
+    font-family: "Comic Sans MS",sans-serif;
+    outline: none;
+}
+
+.info-row {
+    width: 300px;
+    margin: 20px auto;
+}
+
+#form-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+}
+
+#form-container p {
+    font-weight: bolder;
+}
+span {
+    font-weight: normal;
+}
+
+.warning {
+    color: red;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%= title %>
+  </title>
+  <link rel="stylesheet" href="stylesheets/info.css">
+  <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+  <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+  <script type="text/javascript" src="javascripts/lodash.3.10.1.js"></script>
+  <script type="text/javascript" src="javascripts/sha1.min.js"></script>
+  <script type="text/javascript" src="javascripts/login.js"></script>
+</head>
+</html>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4" id="form-container">
+      <form id="login-form" method="post"><h2>Login</h2>
+        <br/>
+        <div class="form-group">
+          <label for="username">UserName :</label>
+          <input id="username" type="text" name="username" placeholder="username" required>
+          <p class="warning"></p>
+        </div>
+        <div class="form-group">
+          <label for="password">Password :</label>
+          <input id="password" type="password" name="password" placeholder="password" required>
+          <p class="warning"></p>
+        </div>
+        <div class="form-group">
+          <input class="btn" id="loginBtn" type="submit" value="登录">
+          <input class="btn" id="registHrefBtn" type="button" value="注册">
+        </div>
+      </form>
+      <div><p id="message"></p></div>
+    </div>
+  </div>
+</div>
+</body>

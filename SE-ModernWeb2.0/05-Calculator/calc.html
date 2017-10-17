@@ -1,0 +1,45 @@
+<!--Created by Marshall Wang-->
+<!--2016.10.04-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Marshall's Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <link rel="favicon" href="images/calculator.png" type="image/png">
+    <script type="text/javascript" src="calc.js"></script>
+</head>
+<body>
+<div id="msh-calculator">
+    <h1>Simple Calculator</h1>
+    <div class="screen">
+        <input type="text" class="text-cont" id="show-expr-res" disabled="disabled">
+    </div>
+    <div id="button-field">
+        <button class="number buttons">7</button>
+        <button class="number buttons">8</button>
+        <button class="number buttons">9</button>
+        <button class="op-symbol buttons">/</button>
+        <button class="number buttons">4</button>
+        <button class="number buttons">5</button>
+        <button class="number buttons">6</button>
+        <button class="op-symbol buttons">*</button>
+        <button class="number buttons">1</button>
+        <button class="number buttons">2</button>
+        <button class="number buttons">3</button>
+        <button class="op-symbol buttons">-</button>
+        <button class="number buttons">0</button>
+        <button class="number buttons">.</button>
+        <button class="op-symbol buttons" id="delOne">←</button>
+        <button class="op-symbol buttons">+</button>
+        <button class="number buttons">(</button>
+        <button class="number buttons">)</button>
+        <button class="op-symbol buttons" id="delAll">CE</button>
+        <button class="op-symbol buttons" id="equal">=</button>
+    </div>
+    <div class="screen">
+        <input type="text" class="text-cont" id="status-bar" disabled="disabled" placeholder="error message">
+    </div>
+</div>
+</body>
+</html>

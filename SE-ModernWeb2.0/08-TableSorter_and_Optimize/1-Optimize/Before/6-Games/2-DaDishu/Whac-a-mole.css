@@ -1,0 +1,99 @@
+/*!
+ * Created by Marshall on 2016/10/14.
+ * use sass to create the .css file
+ * source file: Hammer.scss
+ */
+#hammer-field {
+  position: relative;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+#control-pane {
+  width: 400px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.control-cells {
+  display: inline-block;
+  width: 180px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+}
+.control-cells .in-control-cell {
+  display: inline-block;
+}
+.control-cells p {
+  width: 100px;
+  text-align: right;
+}
+.control-cells input {
+  width: 40px;
+  text-align: left;
+}
+.control-cells #status-bar {
+  width: 70%;
+}
+
+#gamePane {
+  width: 210px;
+  height: 120px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.single-mole {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  margin: 5px;
+  border-radius: 60px;
+  background: #ffffff;
+  border: solid gray 1px;
+}
+.single-mole:focus {
+  outline: none;
+}
+
+.yes-dishu {
+  box-shadow: inset 0px 0px 2px 2px #4683ff;
+}
+
+#after-pane {
+  width: 800px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#after-pane * {
+  font-family: "Comic Sans MS", sans-serif;
+}
+#after-pane span {
+  font-weight: bolder;
+}
+
+/*# sourceMappingURL=Whac-a-mole.css.map */

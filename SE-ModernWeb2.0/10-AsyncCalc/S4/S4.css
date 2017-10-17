@@ -1,0 +1,15 @@
+#orderBar {
+    position: absolute;
+    width: 300px;
+    height: 100px;
+    left: 50%;
+    bottom: 400px;
+    transform: translateX(-50%);
+    background-color: lightblue;
+}
+#orderBar #order {
+    font-size: 26pt;
+    font-weight: bolder;
+    text-align: center;
+    vertical-align: text-bottom;
+}

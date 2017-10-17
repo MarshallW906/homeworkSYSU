@@ -1,0 +1,20 @@
+main {
+    input n as Integer
+    initialize isPrime = 0
+    if (n == 1) {
+        isPrime = 0
+    }else if (n == 2) {
+        isPrime = 1
+    }
+    else
+    loop (i = 2 to i < n, Step 1) {
+        if (n % i == 0) {
+        isPrime = 0
+        exit
+        }
+    }
+    if (isPrime == 1)
+        print "Yes\n"
+    else
+        print "no\n"
+}

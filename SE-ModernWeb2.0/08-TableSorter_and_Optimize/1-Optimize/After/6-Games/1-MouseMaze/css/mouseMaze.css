@@ -1,0 +1,130 @@
+/*!
+ * Created by Marshall on 2016/10/12.
+ * use sass to create the .css file
+ * source file: mouseMaze.scss
+ */
+#statusDiv {
+  width: 1000px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+#maze {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 300px;
+  width: 500px;
+}
+#maze .wall {
+  background-color: #eeeeee;
+  border: 1px solid black;
+}
+#maze .youLoseRed {
+  background-color: red;
+}
+#maze #S-button {
+  background-color: #88ff88;
+  left: 0;
+}
+#maze #E-button {
+  background-color: #8888ff;
+  right: 0;
+}
+
+.button {
+  position: absolute;
+  top: 205px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid black;
+  padding: 5px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 25pt;
+  text-align: center;
+}
+
+#instructions {
+  width: 800px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+#instructions #sample-walls {
+  width: 90px;
+  height: 30px;
+  position: relative;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background-color: #eeeeee;
+  border: 1px solid black;
+}
+
+#maze div.wall {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 150px;
+  z-index: 1;
+}
+
+#maze div.wall + div.wall {
+  border-left: none;
+  border-right: none;
+  z-index: 2;
+  left: 151px;
+  height: 50px;
+  width: 198px;
+}
+
+#maze div.wall + div.wall + div.wall {
+  border-left: 1px black solid;
+  border-right: 1px black solid;
+  z-index: 1;
+  left: 348px;
+  height: 200px;
+  width: 150px;
+}
+
+#maze div.wall + div.wall + div.wall + div.wall {
+  border: 1px black solid;
+  top: 250px;
+  left: 0;
+  height: 48px;
+  width: 498px;
+}
+
+#maze div.wall + div.wall + div.wall + div.wall + div.wall {
+  border-bottom: none;
+  top: 100px;
+  left: 200px;
+  height: 150px;
+  width: 98px;
+}
+
+/*# sourceMappingURL=mouseMaze.css.map */

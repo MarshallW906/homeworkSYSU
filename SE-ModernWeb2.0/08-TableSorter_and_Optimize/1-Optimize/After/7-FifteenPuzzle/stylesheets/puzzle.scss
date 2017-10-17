@@ -1,0 +1,117 @@
+/*!
+ * Created by Marshall Wang
+ * 2016-10-22
+ * use sass to create the css file
+ */
+
+@mixin square($length) {
+  width: $length;
+  height: $length;
+}
+@mixin zero-edges {
+  margin: 0;
+  padding: 0;
+}
+@mixin center-x {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// above is the macro
+// the following are the stylesheets
+
+* {
+  outline: none;
+  user-select: none;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+#game-container {
+  width: 600px;
+  height: auto;
+}
+
+#before-pane, #game-pane, #after-pane, #game-container {
+  @include center-x;
+}
+
+h1, h2, #after-pane {
+  text-align: center;
+}
+
+#statusDiv {
+  transition: all .3s;
+  width: 600px;
+  height: 60px;
+}
+
+#game-pane {
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: 30px 0;
+  text-align: center;
+  #puzzle-container, #bg-image {
+    display: inline-block;
+    margin: auto;
+  }
+  #puzzle-container {
+    @for $i from 0 to 16 {
+      #frag-#{$i} {
+        background-position: #{$i % 4 * -52}px #{floor($i / 4) * -52}px;
+      }
+    }
+    @for $i from 0 to 4 {
+      .row-#{$i} {
+        position: absolute;
+        top: $i * 52px;
+      }
+      .col-#{$i} {
+        position: absolute;
+        left: $i * 52px;
+      }
+    }
+  }
+}
+
+.fragment {
+  display: inline-block;
+  @include square(52px);
+  &:hover {
+    transform: scale(1.05, 1.05);
+  }
+  transition: all .1s;
+}
+.frag-border {
+  border: 1px solid grey;
+}
+@for $i from 0 to 3 {
+  .frag-#{$i} {
+    background-image: url("../images/puzzle-#{$i}.png");
+  }
+}
+
+#blank {
+  display: none;
+}
+
+.btn {
+  width: 110px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 40px 20px;
+  transition: all 0.2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.1, 1.1);
+  }
+}
+
+#bg-image {
+  @include square(208px);
+  @include center-x;
+}

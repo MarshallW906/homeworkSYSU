@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="./view/css_js/index.css">
+    <link rel="stylesheet" href="./view/css_js/bootstrap.min.css">
+    <script type="text/javascript" src="./view/css_js/jquery.2.1.0.js"></script>
+    <script type="text/javascript" src="./view/css_js/lodash.3.10.1.js"></script>
+    <script type="text/javascript" src="./view/css_js/index.js"></script>
+</head>
+</html>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-2" id="form-container">
+            <form action="/" method="POST"><h2>User Register</h2>
+                <div class="form-group">
+                    <label for="username">UserName :</label>
+                    <input id="username" type="text" name="username" placeholder="username">
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="number">StudentNo. :</label>
+                    <input id="number" type="text" name="number" placeholder="student No.">
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Tel :</label>
+                    <input id="tel" type="text" name="tel" placeholder="tel number">
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input id="email" type="text" name="email" placeholder="Email">
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <input class="btn" type="reset" value="Reset">
+                    <input class="btn" type="submit" value="Submit">
+                </div>
+            </form>
+            <div><p id="warnings"></p></div>
+        </div>
+    </div>
+</div>
+</body>

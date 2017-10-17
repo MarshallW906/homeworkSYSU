@@ -1,0 +1,76 @@
+/*!
+ * Created by Marshall Wang
+ * use sass to create css file (source: temp_calc.scss)
+ * 2016.10.04
+ */
+body {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+#msh-calculator {
+  width: 300px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid #526196;
+  box-sizing: border-box;
+  background-color: #34495e;
+}
+#msh-calculator h1 {
+  color: #00AE68;
+  text-align: center;
+  width: 80%;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.screen {
+  margin: 0;
+  padding: 0;
+}
+.screen .text-cont {
+  font-size: 20px;
+  text-align: right;
+  display: block;
+  margin: 12px auto;
+  padding: 0;
+  width: 90%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+*:focus {
+  outline: none;
+}
+
+#button-field {
+  width: 270px;
+  text-align: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.buttons {
+  /*! make every 4 buttons placed in one line */
+  font-size: 20px;
+  display: inline-block;
+  margin: 5px 3px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  border: 1px solid #808080;
+  background-color: #3498db;
+  box-shadow: 3px 3px 5px #888888;
+  border-radius: 10px;
+}
+.buttons:hover {
+  background-color: #75ee3b;
+}
+.buttons:active {
+  background: #2f8f00;
+}
+
+/*# sourceMappingURL=calc.css.map */

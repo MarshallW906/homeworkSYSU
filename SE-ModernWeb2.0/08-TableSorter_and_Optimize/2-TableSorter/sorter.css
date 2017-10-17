@@ -1,0 +1,50 @@
+/*tbody tr {background-color:expression((this.sectionRowIndex%2==0)?"red":"blue")}*/
+/*td {background-color:expression((this.cellIndex%2==0)?"":((this.parentElement.sectionRowIndex%2==0)?"green":"yellow"))}*/
+
+*  {
+    font-family: "Comic Sans MS",sans-serif;
+    user-select: none;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+table tr:nth-child(even) {
+    background-color: #ddd
+}
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid #c4c4c4;
+}
+thead th {
+    text-align: left;
+    color: white;
+    vertical-align: middle;
+}
+thead th:active {
+    background-color: #a1adf7;
+}
+.th-normal {
+    background-color: #011b7b;
+}
+.th-sorted {
+    background-color: #a1adf7;
+}
+
+.triangleMark {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    border: none;
+    float: right;
+    width: 20px;
+    height: 20px;
+}
+.ascending {
+    background: url('./images/ascend.png') center no-repeat;
+}
+.descending {
+    background: url('./images/descend.png') center no-repeat;
+}

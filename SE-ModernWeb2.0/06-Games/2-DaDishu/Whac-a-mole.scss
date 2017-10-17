@@ -1,0 +1,112 @@
+/*!
+ * Created by Marshall on 2016/10/14.
+ * use sass to create the .css file
+ * source file: Hammer.scss
+ */
+$rel: relative;
+
+@mixin zero-edges {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin  center-x($posi: $rel) {
+  position: $posi;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+@mixin center-xy($posi: $rel) { // pass absolute to change the position to absolute
+  position: $posi;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@mixin square($sideLength) {
+  width: $sideLength;
+  height: $sideLength;
+}
+
+// above is the pre-claimed value and macros.
+// the following is the corresponding stylesheets
+
+#hammer-field {
+  position: $rel;
+}
+
+h1, h2 {
+  text-align: center;
+  font-family: "Comic Sans MS", sans-serif;
+}
+
+#control-pane {
+  width: 400px;
+  @include center-x;
+}
+
+.control-cells {
+  display: inline-block;
+  width: 180px;
+  height: 20px;
+  @include zero-edges;
+  .in-control-cell {
+    display: inline-block;
+  }
+  p {
+    width: 100px;
+    text-align: right;
+  }
+  input {
+    width: 40px;
+    text-align: left;
+  }
+  #status-bar {
+    width: 70%;
+  }
+}
+
+#gamePane {
+  width: 210px;
+  height: 120px;
+  @include center-x;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  margin: 10px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.single-mole {
+  @include square(11px);
+  padding: 0;
+  margin: 5px;
+  border-radius: 60px;
+  background: #ffffff;
+  border: solid gray 1px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.yes-dishu {
+  box-shadow: inset 0px 0px 2px 2px #4683ff;
+}
+
+#after-pane {
+  width: 800px;
+  @include center-x;
+  * {
+    font-family: "Comic Sans MS", sans-serif;
+  }
+  span {
+    font-weight: bolder;
+  }
+}

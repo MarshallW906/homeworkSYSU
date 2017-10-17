@@ -1,0 +1,25 @@
+begin
+
+int num[10000]
+int n, i, j, m, temp
+
+input n
+
+loop 1 to n Step 1 {
+    input m
+
+    All of num[0..9999] := 0
+
+    for (i = 0; i < m; i++)
+        input num[i];
+    for (i = 0; i < m; i++) {
+        temp := num[i]
+        for (j = i - 1; j >= 0 && num[j] > temp; j--) {
+            num[j + 1] := num[j];
+        }
+    num[j + 1] := temp
+    }
+    :output all of the m numbers from the 1st to the last
+}
+
+end

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="stylesheets/info.css">
+    <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/lodash.3.10.1.js"></script>
+    <script type="text/javascript" src="javascripts/sha1.min.js"></script>
+    <script type="text/javascript" src="javascripts/regist.js"></script>
+</head>
+</html>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4" id="form-container">
+            <form method="post" id="regist-form"><h2>User Register</h2>
+                <br/>
+                <div class="form-group">
+                    <label for="username">UserName :</label>
+                    <input id="username" type="text" name="username" placeholder="username" required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password :</label>
+                    <input id="password" type="password" name="password" placeholder="password" required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="password-again">Password Again :</label>
+                    <input id="password-again" type="password" name="password-again" placeholder="Enter password again" required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="number">StudentNo. :</label>
+                    <input id="number" type="text" name="number" placeholder="student No." required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="tel">Tel :</label>
+                    <input id="tel" type="text" name="tel" placeholder="tel number" required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input id="email" type="text" name="email" placeholder="Email" required>
+                    <p class="warning"></p>
+                </div>
+                <div class="form-group">
+                    <input class="btn" id="loginBtn" type="button" value="返回登录页">
+                    <input class="btn" type="reset" value="重新输入">
+                    <input class="btn" id="registBtn" type="submit" value="注册" required>
+                </div>
+            </form>
+            <div><p id="message"></p></div>
+        </div>
+    </div>
+</div>
+</body>

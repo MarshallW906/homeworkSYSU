@@ -1,0 +1,137 @@
+/*!
+ * Created by Marshall Wang
+ * 2016-10-22
+ * use sass to create the css file
+ */
+* {
+  outline: none;
+  user-select: none;
+  font-family: "Comic Sans MS", sans-serif; }
+
+#game-container {
+  width: 600px;
+  height: auto; }
+
+#before-pane, #game-pane, #after-pane, #game-container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+h1, h2, #after-pane {
+  text-align: center; }
+
+#statusDiv {
+  transition: all .3s;
+  width: 600px;
+  height: 60px; }
+
+#game-pane {
+  width: 500px;
+  height: auto;
+  position: relative;
+  margin: 30px 0;
+  text-align: center; }
+  #game-pane #puzzle-container, #game-pane #bg-image {
+    display: inline-block;
+    margin: auto; }
+  #game-pane #puzzle-container #frag-0 {
+    background-position: 0px 0px; }
+  #game-pane #puzzle-container #frag-1 {
+    background-position: -52px 0px; }
+  #game-pane #puzzle-container #frag-2 {
+    background-position: -104px 0px; }
+  #game-pane #puzzle-container #frag-3 {
+    background-position: -156px 0px; }
+  #game-pane #puzzle-container #frag-4 {
+    background-position: 0px -52px; }
+  #game-pane #puzzle-container #frag-5 {
+    background-position: -52px -52px; }
+  #game-pane #puzzle-container #frag-6 {
+    background-position: -104px -52px; }
+  #game-pane #puzzle-container #frag-7 {
+    background-position: -156px -52px; }
+  #game-pane #puzzle-container #frag-8 {
+    background-position: 0px -104px; }
+  #game-pane #puzzle-container #frag-9 {
+    background-position: -52px -104px; }
+  #game-pane #puzzle-container #frag-10 {
+    background-position: -104px -104px; }
+  #game-pane #puzzle-container #frag-11 {
+    background-position: -156px -104px; }
+  #game-pane #puzzle-container #frag-12 {
+    background-position: 0px -156px; }
+  #game-pane #puzzle-container #frag-13 {
+    background-position: -52px -156px; }
+  #game-pane #puzzle-container #frag-14 {
+    background-position: -104px -156px; }
+  #game-pane #puzzle-container #frag-15 {
+    background-position: -156px -156px; }
+  #game-pane #puzzle-container .row-0 {
+    position: absolute;
+    top: 0px; }
+  #game-pane #puzzle-container .col-0 {
+    position: absolute;
+    left: 0px; }
+  #game-pane #puzzle-container .row-1 {
+    position: absolute;
+    top: 52px; }
+  #game-pane #puzzle-container .col-1 {
+    position: absolute;
+    left: 52px; }
+  #game-pane #puzzle-container .row-2 {
+    position: absolute;
+    top: 104px; }
+  #game-pane #puzzle-container .col-2 {
+    position: absolute;
+    left: 104px; }
+  #game-pane #puzzle-container .row-3 {
+    position: absolute;
+    top: 156px; }
+  #game-pane #puzzle-container .col-3 {
+    position: absolute;
+    left: 156px; }
+
+.fragment {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  transition: all .1s; }
+  .fragment:hover {
+    transform: scale(1.05, 1.05); }
+
+.frag-border {
+  border: 1px solid grey; }
+
+.frag-0 {
+  background-image: url("../images/puzzle-0.png"); }
+
+.frag-1 {
+  background-image: url("../images/puzzle-1.png"); }
+
+.frag-2 {
+  background-image: url("../images/puzzle-2.png"); }
+
+#blank {
+  display: none; }
+
+.btn {
+  width: 110px;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  margin: 40px 20px;
+  transition: all 0.2s;
+  cursor: pointer; }
+  .btn:hover {
+    transform: scale(1.1, 1.1); }
+
+#bg-image {
+  width: 208px;
+  height: 208px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%); }
+
+/*# sourceMappingURL=puzzle.css.map */
