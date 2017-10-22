@@ -16,15 +16,19 @@ class MD5 {
         void UpdateMd5(const uchar8 input[], const int length);
         void UpdateMd5(const char8 input[], const int length);
 
+        /**
+         * call Finalize() after all the UpdateMd5() operations is done
+         * then will calculate the final MD5 result
+         */
         void Finalize();
 
-        void ComputMd5(const uchar8 input[], const int length);
-        void ComputMd5(const char8 input[], const int length);
-
+        // call GetMd5() / printMd5() after Finalize()
         string GetMd5();
-
         void printMd5();
 
+        // for just one (this) input, compute MD5 and output immediately
+        void ComputMd5(const uchar8 input[], const int length);
+        void ComputMd5(const char8 input[], const int length);
 
     private:
         typedef unsigned int uint32;       // make sure it is 32 bit;
@@ -57,9 +61,7 @@ class MD5 {
         void UcharToUint(uint32 output[], const uchar8 input[], const unsigned int transLength);
 
         void FourRound(const uchar8 block[]);
-
         void LinkResult();
-
 };
 
 /**

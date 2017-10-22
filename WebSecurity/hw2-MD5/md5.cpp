@@ -276,7 +276,8 @@ void MD5::Finalize() {
         Bits[i] = (totalInputBits_ >> 8*i) & 0xff;
     }
 
-    UpdateMd5(Bits, 8); // add the number of  original input (the last 64bits)
+    // add the number of  original input (the last 64bits)
+    UpdateMd5(Bits, 8);
 
     LinkResult();
     isDone_ = true;
