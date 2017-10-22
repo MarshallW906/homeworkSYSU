@@ -1,6 +1,6 @@
-#include"md5.h"
+#include "md5.h"
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 // left-rotate table
@@ -292,4 +292,31 @@ void MD5::ComputMd5(const uchar8 input[], const int length) {
 
 void MD5::ComputMd5(const char8 input[], const int length) {
     ComputMd5((const uchar8 *)input, length);
+}
+
+
+int main() {
+    cout << "md5.cpp run" << endl;    
+    MD5 m;
+    cout << "MD5 calc: ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz" << endl;
+    MD5::char8 str[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    m.ComputMd5(str,sizeof(str) - 1);
+    m.printMd5();
+
+    cout << "MD5 calc: [SAME CONTENT] but split by 3 segments:" << endl;
+    m.init();
+    MD5::uchar8 str1[] = "ABCDEFGHIJKLMN";
+    MD5::uchar8 str2[] = "OPQRSTUVWXYZabcdefghijk";
+    MD5::uchar8 str3[] = "lmnopqrstuvwxyz";
+    m.UpdateMd5(str1,sizeof(str1) - 1);
+    m.UpdateMd5(str2,sizeof(str2) - 1);
+    m.UpdateMd5(str3,sizeof(str3) - 1);
+    m.Finalize();
+    m.printMd5();
+
+    cout << "MD5 calc: ILoveSoftwareEngineering" << endl;
+    m.init();
+    MD5::uchar8 str4[] = "ILoveSoftwareEngineering";
+    m.ComputMd5(str4, sizeof(str4) - 1);
+    m.printMd5();
 }
