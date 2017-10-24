@@ -1,4 +1,4 @@
-/*
+/**
  * this program is used for generate the majority of 8 digits problems and 8 queens problems
  */
 
@@ -12,54 +12,45 @@
 #define LEFT 2
 #define RIGHT 3
 
-inline void swap(int *a, int *b)
-{
+inline void swap(int *a, int *b) {
     *a ^= *b ^= *a ^= *b;
 }
 
-void generate_8_digits_problem()
-{
+void generate_8_digits_problem() {
     FILE *fp = fopen("testcase_8_digits_problem", "w");
     int testcase = TESRCASE, direction, position, steps;
-    while (testcase--)
-    {
+    while (testcase--) {
         int state[9] = {1, 2, 3, 4, 5, 6, 7, 8, 0};
         steps = STEP;
         position = 9;
-        while (steps--)
-        {
+        while (steps--) {
             direction = rand() % 4;
-            switch (direction)
-            {
+            switch (direction) {
             case UP:
                 if (position <= 3)
                     break;
-                else
-                {
+                else {
                     swap(&state[position - 1], &state[position - 4]), position -= 3;
                     break;
                 }
             case DOWN:
                 if (position >= 7)
                     break;
-                else
-                {
+                else {
                     swap(&state[position - 1], &state[position + 2]), position += 3;
                     break;
                 }
             case LEFT:
                 if (position % 3 == 1)
                     break;
-                else
-                {
+                else {
                     swap(&state[position - 1], &state[position - 2]), position--;
                     break;
                 }
             case RIGHT:
                 if (position % 3 == 0)
                     break;
-                else
-                {
+                else {
                     swap(&state[position - 1], &state[position]), position++;
                     break;
                 }
@@ -70,8 +61,7 @@ void generate_8_digits_problem()
     fclose(fp);
 }
 
-void generate_8_queens_problem()
-{
+void generate_8_queens_problem() {
     FILE *fp = fopen("testcase_8_queens_problem", "w");
     int testcase = TESRCASE, state[8], position, i;
     while (testcase--)
@@ -83,8 +73,7 @@ void generate_8_queens_problem()
     fclose(fp);
 }
 
-int main()
-{
+int main() {
     generate_8_digits_problem();
     generate_8_queens_problem();
     return 0;
