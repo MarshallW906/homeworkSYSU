@@ -9,6 +9,9 @@
 #include <vector>
 #include <algorithm>
 
+#include <iostream>
+using namespace std;
+
 #define TESRCASE 100000
 #define UP 0
 #define DOWN 1
