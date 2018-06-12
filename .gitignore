@@ -1,3 +1,11 @@
+## Binary
+*.out
+*.exe
+
+## Test Output
+*.txt
+*.log
+
 .DS_Store
 .vscode/
 
